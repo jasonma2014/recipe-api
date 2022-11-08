@@ -35,6 +35,7 @@ func NewRecipeHandler(c *gin.Context) {
 	recipes = append(recipes, recipe)
 	c.JSON(http.StatusOK, recipe)
 }
+
 func main() {
 	router := gin.Default()
 	router.POST("/recipes", NewRecipeHandler)
